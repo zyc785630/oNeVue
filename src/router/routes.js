@@ -12,15 +12,22 @@ export default [
     component: Home
   },
   {
-    path: '/search',
+    name:'search',
+    path: '/search/:keyword',
     component: Search
   },
   {
     path: '/register',
-    component: Register
+    component: Register,
+    meta:{
+      isHideFooter:true
+    }
   },
   {
     path: '/login',
-    component: Login
+    component: Login,
+    meta:{
+      isHideFooter:true
+    }
   },
 ]
