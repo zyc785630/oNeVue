@@ -13,10 +13,11 @@ axios的二次封装(axios本身就是对XHR原生ajax的封装)     面试必�
 */
 import axios from 'axios'
 import NProgress from 'nprogress'
+
 /* 1. 配置通用的基础路径和超时 */
 // instance是一个与axios功能类似的ajax请求函数
 const instance = axios.create({
-  baseURL: '/api',  // 基础path
+  baseURL: '/mock',  // 基础path
   // baseURL: 'http://182.92.128.115/api',
   timeout: 15000 // 请求超时时间
 })
