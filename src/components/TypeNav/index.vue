@@ -16,7 +16,7 @@
                 </h3>
                 <div class="item-list clearfix">
                   <div class="subitem">
-                    <dl class="fore" v-for="c2 in c1.categoryChild" :key="c2.categoryId">
+                    <dl class="fore" v-for="(c2, index) in c1.categoryChild" :key="c2.categoryId">
                       <dt>
                         <!-- <router-link :to="`/search?categoryName=${c2.categoryName}&category2Id=${c2.categoryId}`">{{c2.categoryName}}</router-link> -->
                         <!-- <a href="javascript:" @click="toSearch({categoryName: c2.categoryName, category2Id: c2.categoryId})">{{c2.categoryName}}</a> -->
@@ -24,7 +24,7 @@
                       </dt>
 
                       <dd>
-                        <em v-for="c3 in c2.categoryChild" :key="c3.categoryId">
+                        <em v-for="(c3, index) in c2.categoryChild" :key="c3.categoryId">
                           <!-- <router-link :to="`/search?categoryName=${c3.categoryName}&category3Id=${c3.categoryId}`">{{c3.categoryName}}</router-link> -->
                           <!-- <a href="javascript:" 
                             @click="toSearch({categoryName: c3.categoryName, category3Id: c3.categoryId})">
